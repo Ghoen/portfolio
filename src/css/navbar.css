@@ -1,0 +1,96 @@
+@import url(/src/css/colors.css);
+@import url(/src/css/fonts.css);
+
+#nav-wrapper{
+    margin: 0;
+    margin-bottom: 40px;
+    width: 100%;
+    height: 75px;
+    bottom: -150px;
+    left: 0;
+    z-index: 3;
+    position: fixed;
+    justify-content: center;
+    display: flex;
+
+    transition: bottom 0.4s ease-in-out;
+}
+
+#nav-wrapper.visible{
+    bottom: 0;
+}
+
+#nav-container{
+    width: auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 1rem;
+    background-color: var(--glassy-color);
+    -webkit-backdrop-filter: blur(75px);
+    backdrop-filter: blur(75px);
+    border-radius: 10px;
+}
+
+#navbar{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#nav-container ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    width: auto;
+    height: 100%;
+    padding: 0;
+}
+
+.progress-bar{
+    width: 85px;
+    height: 4px;
+    background-color: var(--tertiary-light-color);
+    border-radius: 4px;
+}
+
+ul *{
+    margin: 0 0.5rem;
+}
+
+#navbar a {
+    font-family: 'IBM_Plex_Sans', sans-serif;
+    color: var(--tertiary-light-color);
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.inner-link::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--electric-yellow-color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.inner-link:hover {
+    font-weight: bold;
+    transform: scale(1.1);
+}
+
+.inner-link:hover::before {
+    transform: scaleX(1);
+}

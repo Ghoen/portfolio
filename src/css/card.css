@@ -1,0 +1,73 @@
+@import url(/src/css/colors.css);
+@import url(/src/css/fonts.css);
+
+#card-container {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card-image {
+    width: 100%;
+    border-radius: 12px;
+    height: 214px;
+    object-fit: cover;
+}
+
+.card {
+    width: 25vw;
+    height: auto;
+    background-color: var(--primary-light-color);
+    padding: 8px;
+    border-radius: 12px;
+    border: 2px solid var(--primary-dark-color);
+    margin: 2rem auto;
+}
+
+.card-inner-container {
+    padding: 8px 8px 8px 8px;
+}
+
+.project-name {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--tertiary-dark-color);
+    margin: 8px auto 16px auto;
+}
+
+.tag {
+    padding: 4px 8px;
+    border: 1px solid var(--primary-dark-color);
+    color: var(--primary-dark-color);
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.project-description {
+    font-size: 16px;
+    color: var(--tertiary-dark-color);
+    line-height: 150%;
+}
+
+.button-card {
+    border:none;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: 600;
+    background-color: var(--tertiary-dark-color);
+    color: var(--tertiary-light-color);
+    display: block;
+    margin: auto auto 5px auto;
+    transition: all 200ms ease-in-out;
+    cursor: pointer;
+}
+
+.button-card:hover, .button-card:focus {
+    color: var(--tertiary-dark-color);
+    background-color: var(--tertiary-light-color);
+}

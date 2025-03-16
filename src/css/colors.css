@@ -1,0 +1,11 @@
+:root{
+    --primary-dark-color: #34747d;
+    --secondary-dark-color: #113f4f;
+    --tertiary-dark-color: #023059;
+    --primary-light-color: #9BE8D4;
+    --secondary-light-color: #7FD7BE;
+    --tertiary-light-color: #E1F3FF;
+    --glassy-color: rgba(116, 116, 116, 0.3);
+    --glassy-color-two: rgba(202, 202, 202, 0.2);
+    --electric-yellow-color: #FFD500;
+}

@@ -1,0 +1,199 @@
+/* fonts */
+@import url(/src/css/fonts.css);
+/* colors */
+@import url(/src/css/colors.css);
+/* navbar */
+@import url(/src/css/navbar.css);
+/* card */
+@import url(/src/css/card.css);
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*:not(#nav-wrapper *):not(#about-me-wrapper *):not(.card *) {
+    overflow-x: hidden;
+}
+
+#border-screen-shadow {
+    position: fixed;
+    bottom: -35vh;
+    left: 0;
+    width: 100vw;
+    height: 40vh;
+    background: linear-gradient(0deg, rgba(1, 34, 65, 1) 0%, rgba(1, 34, 65, 0) 100%);
+    z-index: 2;
+}
+
+section, #welcome-section {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    margin-bottom: 25vh;
+}
+
+section {
+    flex-direction: column;
+    justify-content: center;
+}
+
+h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin: 2rem auto;
+    width: 100vw;
+}
+
+/* ----------------- Sections ----------------- */
+
+/* Welcome section */
+#welcome-section{
+    background-color: var(--primary-dark-color);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#main-logo {
+    width: 500%;
+    max-width: 600px;
+    margin: auto;
+}
+
+#text-title-wrapper {
+    height: auto;
+    width: auto;
+    max-width: 40vw;
+    margin: auto;
+    margin-left: 0;
+}
+
+h1 {
+    font-size: 7rem;
+    font-weight: medium;
+    color: var(--primary-light-color);
+    margin: 0;
+}
+
+.text-block {
+    display: block;
+}
+
+#alias-title {
+    color: var(--tertiary-light-color);
+}
+
+#sub-title {
+    font-size: 2rem;
+    font-style: titalic;
+    color: var(--tertiary-light-color);
+    margin-left: 0;
+}
+
+/* About me section */
+#about-me-section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#about-me-wrapper {
+    width: 50%;
+    margin: auto;
+    margin-right: 0;
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+p, h4, #about-me-wrapper li, #experience-section li {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+    margin-bottom: 0;
+    margin-top: 4rem;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+.simple-link {
+    position: relative;
+    text-decoration: none;
+    color: var(--tertiary-dark-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#animated-image-container {
+    width: 500px;
+    height: 700px;
+    margin: auto auto 1rem auto;
+}
+
+#background-canvas {
+    width: 100%;
+    height: 100%;
+    background-color: var(--secondary-dark-color);
+    border-radius: 1.5rem;
+}
+
+/* Experience */
+#experience-section-wrapper {
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+/* Projects */
+#project-list-section h2 {
+    margin: auto;
+    width: 100vw;
+}
+
+
+
+/*
+css gradient: second layer
+{
+    width: 250px;
+    height: 250px;
+    background: 
+	linear-gradient(15deg, rgba(17,63,79,1), rgba(52,116,125,0.66));
+}
+
+resulting css
+{
+    width: 250px;
+    height: 250px;
+    filter: contrast(150%) brightness(200%);
+    background: 
+	linear-gradient(15deg, rgba(17,63,79,1), rgba(52,116,125,0.66)),
+	url(/👆/that/noise.svg);
+}
+*/
+
+/* Style for mobile devices
+@media screen and (max-width: 768px) {
+
+}
+*/
