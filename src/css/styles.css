@@ -1,11 +1,11 @@
 /* fonts */
-@import url(/src/css/fonts.css);
+@import url(fonts.css);
 /* colors */
-@import url(/src/css/colors.css);
+@import url(colors.css);
 /* navbar */
-@import url(/src/css/navbar.css);
+@import url(navbar.css);
 /* card */
-@import url(/src/css/card.css);
+@import url(card.css);
 
 html {
     scroll-behavior: smooth;
