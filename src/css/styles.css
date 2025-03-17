@@ -164,12 +164,41 @@ h3 {
     align-items: start;
 }
 
-/* Projects */
-#project-list-section h2 {
-    margin: auto;
-    width: 100vw;
+#experience-section ul {
+    padding: 0;
 }
 
+#experience-section li {
+    list-style-type: none;
+    line-height: 150%;
+    margin: 0;
+}
+
+/* Projects */
+#project-list-section h2 {
+    margin: 2rem auto;
+    width: auto;
+}
+
+/* Contact me */
+#contact-me-section *{
+    width: auto;
+    margin: auto;
+}
+
+#contact-me-section ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+#contact-me-section a {
+    margin: auto 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 
 /*
