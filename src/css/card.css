@@ -1,81 +1,137 @@
 @import url(colors.css);
 @import url(fonts.css);
 
-#card-container {
-    width: auto;
-    height: auto;
-    margin: auto 5rem;
+#card-wrapper {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.card-image {
+    gap: 5rem;
+    justify-content: center;
+    margin: 2rem auto;
+    padding: 5rem;
     width: 100%;
-    border-radius: 12px;
-    height: 250px;
-    object-fit:contain;
+    min-height: 50vh;
 }
 
 .card {
-    width: 25vw;
-    height: auto;
-    background-color: var(--tertiary-light-color);
-    padding: 1rem;
-    border-radius: 12px;
-    border: 2px solid var(--primary-dark-color);
-    margin: 2rem auto;
-}
-
-.card-inner-container {
-    padding: 8px 8px 8px 8px;
-    height: auto;
-    width: 100%;
-}
-
-.project-name {
-    width: auto;
-    display: block;
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--tertiary-dark-color);
-    margin: 0.5rem auto 2rem auto;
-}
-
-.tag {
-    padding: 4px 8px;
-    border: 2px solid var(--tertiary-dark-color);
-    color: var(--tertiary-dark-color);
-    border-radius: 50px;
-    font-size: 1 rem;
-    font-weight: bold;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 1.5rem;
+    width: 40vw;
+    aspect-ratio: 2.5/1;
+    border-radius: 20px;
+    background: linear-gradient(
+        170deg,
+        rgba(58, 56, 56, 0.623) 0%,
+        rgb(31, 31, 31) 100%
+    );
+    position: relative;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.55);
+    overflow: hidden;
+    transform-origin: center center;
+    transition:
+    transform 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
     margin: auto;
 }
 
-.project-description {
-    font-size: 1.25rem;
-    color: var(--tertiary-dark-color);
-    line-height: 150%;
-    margin: 2rem 0.5rem;
+.image-container {
+    width: 40%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(
+        170deg,
+        var(--primary-dark-color) 0%,
+        var(--secondary-dark-color) 40%,
+        var(--tertiary-dark-color) 100%
+    );
+}
+
+.card-image {
+    top: 1.5rem;
+    left: 2rem;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+    position: absolute;
+    transition: transform 0.5s ease-in-out;
+    transform-origin: center center;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    width: 55%;
+    height: auto;
+    padding: 1rem;
+}
+
+.card-title {
+    margin: auto 0;
+    font-size: 1.5rem;
+    color: #f1f1f1;
+}
+
+.label-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: auto 0;
+}
+
+.label-container {
+    display: inline-block;
+    padding: 0.4rem 0.6rem;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 19px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    font-size: 0.8rem;
+    backdrop-filter: blur(5px);
+    color: #f1f1f1;
+    transition: background 0.3s ease-in-out;
+}
+
+.label {
+letter-spacing: 0.1rem;
+}
+
+.card-description {
+font-size: 0.9rem;
+color: #e0e0e0;
+line-height: 1.4;
+margin: auto 0;
+overflow: hidden;
+text-overflow: ellipsis;
+
 }
 
 .button-card {
-    border:none;
-    padding: 12px 24px;
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 1.25rem;
-    background-color: var(--tertiary-dark-color);
-    color: var(--tertiary-light-color);
-    display: block;
-    margin: auto auto 5px auto;
-    transition: all 200ms ease-in-out;
+    font-size: 0.9rem;
+    padding: 0.4rem 0.6rem;
+    border-radius: 10px;
+    font-weight: bold;
+    color: white;
+    background-color: grey;
     cursor: pointer;
-    bottom: 0;
+    margin: auto auto 0 auto;
 }
 
-.button-card:hover, .button-card:focus {
-    color: var(--tertiary-dark-color);
-    background-color: var(--tertiary-light-color);
+.button-card:hover {
+    background-color: white;
+    color: gray;
+}
+
+.card:hover {
+transform: scale(1.02);
+box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7);
+z-index: 2;
+}
+
+.card:hover .card-image {
+    transform: scale(1.06);
 }
