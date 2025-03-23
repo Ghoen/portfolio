@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Junior front-end developer and UX/UI designer. Passionate about interactive experiences, gamification, and intuitive web design."/>
     <title>Ghoen's portfolio</title>
     <link rel="stylesheet" href="src/css/styles.css">
 </head>
@@ -14,20 +15,21 @@
             <nav id="navbar">
                 <ul>
                     <li>
-                        <a id="about-me-link" class="inner-link" href="#about-me-section">ABOUT ME</a>
+                        <a id="about-me-link" class="inner-link" href="#about-me-section">About me</a>
                     </li>
-                    <div id="progress-bar-one" class="progress-bar"></div>
                     <li>
-                        <a id="experience-link" class="inner-link" href="#experience-section">EXPERIENCE</a>
+                        <a id="experience-link" class="inner-link" href="#experience-section">Experience</a>
                     </li>
-                    <div id="progress-bar-two" class="progress-bar"></div>
                     <li>
-                        <a id="project-list-link" class="inner-link" href="#project-list-section">PROJECTS</a>
+                        <a id="project-list-link" class="inner-link" href="#project-list-section">Projects</a>
                     </li>
-                    <div id="progress-bar-three" class="progress-bar"></div>
                     <li>
-                        <a id="contact-me-nav" class="inner-link" href="#contact-me-section">CONTACT</a>
+                        <a id="contact-me-nav" class="inner-link" href="#contact-me-section">Contact</a>
                     </li>
+                    <div class="checkbox-wrapper-8">
+                        <input type="checkbox" id="cb3-8" class="tgl tgl-skewed">
+                        <label for="cb3-8" data-tg-on="EN" data-tg-off="ESP" class="tgl-btn"></label>
+                    </div>
                 </ul>
             </nav>
         </div>
@@ -47,10 +49,25 @@
     </header>
 
     <!-- second section -->
-    <section id="about-me-section">
-        <div id="about-me-wrapper">
+    <section id="about-me-section" class="content-section">
+        <div class="transition-shape">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
+            </svg>
+        </div>
+        <div id="about-me-wrapper" class="section-wrapper">
             <h2>About Me</h2>
-            <p>I'm a junior front-end developer and UX/UI designer. I love creating new experiences and pushing the boundaries of conventional design (you'll see a bit of this in my projects).</p>
+            <div id="about-me-container">
+                <p>
+                    I'm a junior <span class="bold-text">front-end developer</span> and <span class="bold-text">UX/UI designer</span>. I love creating new experiences and pushing the boundaries of conventional design—you’ll see a bit of this in my projects.
+                </p>
+                <p>
+                    Beyond coding and design, I’m passionate about video games and interactive media. Through them, I’ve come to understand the power of <span class="italic-text">narrative</span>, <span class="italic-text">visual language</span>, and <span class="italic-text">gamification—elements</span> I love incorporating into my work to create deeper user connections and encourage more active, intentional engagement. I believe that capturing and guiding the user's attention effectively is one of the most crucial aspects of web design and development.
+                </p>
+                <p>
+                    For me, design is not just about aesthetics; it’s about crafting meaningful interactions that make every experience more intuitive, immersive, and enjoyable.
+                </p>
+            </div>
             <h3>About My Education</h3>
             <p>
                 I hold a Higher Technical Degree in <span class="bold-text">Software Development</span> from CETI, Mexico. I am also currently completing a Bachelor's Degree in <span class="bold-text">Digital Design and Animation</span> at UNITEC, México.
@@ -60,18 +77,20 @@
                 <li><span class="bold-text">Introduction to Cybersecurity</span> - Cisco Networking Academy (2021)</li>
                 <li><span class="bold-text">Responsive Web Design</span> - FreeCodeCamp (2024)</li>
             </ul>
-            <p><span class="text-block"><span class="bold-text">Want to know more?</span> Feel free to <a href="#contact-me-section" class="inner-link simple-link">contact me!</a></span></p>
-        </div>
-        <div id="animated-image-container">
-            <div id="background-canvas" src="" alt="">
-
-            </div>
+            <p>
+                <span class="text-block"><span class="bold-text">Want to know more?</span> Feel free to <a href="#contact-me-section" class="bold-text">contact me!</a></span>
+            </p>
         </div>
     </section>
 
     <!-- third setcion -->
-    <section id="experience-section">
-        <div id="experience-section-wrapper">
+    <section id="experience-section" class="content-section">
+        <div class="inverted-transition-shape">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
+            </svg>
+        </div>
+        <div id="experience-section-wrapper" class="section-wrapper">
             <h2>Experience</h2>
             <div id="experience-container">
                 <h3>Freelance Software Developer (2023-2024)</h3>
@@ -103,157 +122,206 @@
     </section>
 
     <!-- fourth section -->
-    <section id="project-list-section">
-        <h2>Projects</h2>
-        <div id="card-container">
-            
-            <!-- cards -->
-            <div class="card">
-                <img class="card-image" src="assests/images/DocumentationWeb.PNG" alt="Web de documentación">
-                <div class="card-inner-container">
-                    <h3 class="project-name">Documentation Web Page</h3>
-                    <div class="tag-container">
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
-                        <span class="tag">Figma</span>
+    <section id="project-list-section" class="content-section">
+        <div class="custom-shape-divider-top-1742767707">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
+            </svg>
+        </div>
+        <div class="section-wrapper">
+            <h2>Projects</h2>
+            <div id="card-wrapper">
+                
+                <!-- new cards -->
+                <div class="card">
+                    <div class="image-container">
+                        <img class="card-image" src="assests/images/DocumentationWeb.PNG" alt="Documentation web">
                     </div>
-                    <p class="project-description">Also part of the Responsive Web Design Certification, this project involved building a responsive documentation page for a chosen technology or programming language—CSS in this case.</p>
-                    <button class="button-card">See more</button>
+                    <div class="info-container">
+                        <h3 class="card-title">Documentation Web Page</h3>
+                        <div class="label-wrapper">
+                            <div class="label-container">
+                                <span class="label">HTML</span>
+                            </div>
+                            <div class="label-container">
+                                <span class="label">CSS</span>
+                            </div>
+                            <div class="label-container">
+                                <span class="label">Figma</span>
+                            </div>
+                        </div>
+                        <p class="card-description">
+                            As part of the Responsive Web Design Certification, this project involved building a responsive documentation page for a chosen technology or programming language—CSS in this case.
+                        </p>
+                        <button class="button-card open-modal-btn" data-image="assests/images/DocumentationWeb.PNG">See more</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="image-container">
+                        <img class="card-image" src="assests/images/ProductLandingPage.PNG" alt="Product landing page">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="card-title">Product Landing Page</h3>
+                        <div class="label-wrapper">
+                            <div class="label-container">
+                                <span class="label">HTML</span>
+                            </div>
+                            <div class="label-container">
+                                <span class="label">CSS</span>
+                            </div>
+                            <div class="label-container">
+                                <span class="label">Figma</span>
+                            </div>
+                        </div>
+                        <p class="card-description">
+                            Also part of the Responsive Web Design Certification, this project consisted of designing and developing a fully responsive product landing page, ensuring adaptability across various screen sizes.
+                        </p>
+                        <button class="button-card open-modal-btn" data-image="assests/images/ProductLandingPage.PNG">See more</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="image-container">
+                        <img class="card-image" src="assests/images/BrandingSignTwo.png" alt="Branding design for Oh my honey">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="card-title">Logo Design (Branding) – Oh My Honey!</h3>
+                        <div class="label-wrapper">
+                            <div class="label-container">
+                                <span class="label">SVG</span>
+                            </div>
+                            <div class="label-container">
+                                <span class="label">Figma</span>
+                            </div>
+                        </div>
+                        <p class="card-description">
+                            This academic project involved the complete process of designing a corporate identity for a business, from the creative brief to the final deliverable.
+                        </p>
+                        <button class="button-card open-modal-btn" data-image="assests/images/BrandingSignTwo.png">See more</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="image-container">
+                        <img class="card-image" src="assests/images/BrandingSign.jpg" alt="Branding design for DESIM">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="card-title">Logo Design (Branding) – DESIM</h3>
+                        <div class="label-wrapper">
+                            <div class="label-container">
+                                <span class="label">SVG</span>
+                            </div>
+                        </div>
+                        <p class="card-description">
+                            This is one of my real-world projects, where I created the corporate identity for Diesel Especialistas en Sistemas de Inyección Mercado (DESIM), a specialized diesel workshop.
+                        </p>
+                        <button class="button-card open-modal-btn" data-image="assests/images/BrandingSign.jpg">See more</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="image-container">
+                        <img class="card-image" src="assests/images/GameInterfaceDesign.png" alt="Game UI design for LoopTower">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="card-title">UI Design for LoopTower</h3>
+                        <div class="label-wrapper">
+                            <div class="label-container">
+                                <span class="label">Blender</span>
+                            </div>
+                            <div class="label-container">
+                                <span class="label">Canva</span>
+                            </div>
+                            <div class="label-container">
+                                <span class="label">Figma</span>
+                            </div>
+                        </div>
+                        <p class="card-description">
+                            In this project, the initial interface for the video game LoopTower was developed. The design was based on a retro aesthetic, inspired by old RPG Maker games.
+                        </p>
+                        <button class="button-card open-modal-btn" data-image="assests/images/GameInterfaceDesign.png">See more</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="image-container">
+                        <img class="card-image" src="assests/images/MobileAppPrototype.PNG" alt="Mobile app design">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="card-title">Mobile App Design & Prototyping</h3>
+                        <div class="label-wrapper">
+                            <div class="label-container">
+                                <span class="label">SVG</span>
+                            </div>
+                            <div class="label-container">
+                                <span class="label">Figma</span>
+                            </div>
+                        </div>
+                        <p class="card-description">
+                            This project focused on UI design for a mobile application, considering the target audience and user experience. The concept behind the app was to provide an accessible way to identify and filter foods that are incompatible with restrictive diets, intolerances, and allergies.
+                        </p>
+                        <button class="button-card open-modal-btn" data-image="assests/images/MobileAppPrototype.PNG">See more</button>
+                    </div>
                 </div>
             </div>
 
-            <div class="card">
-                <img class="card-image" src="assests/images/ProductLandingPage.PNG" alt="Product landing page">
-                <div class="card-inner-container">
-                    <h3 class="project-name">Product Landing Page</h3>
-                    <div class="tag-container">
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
-                        <span class="tag">Figma</span>
-                    </div>
-                    <p class="project-description">As part of the Responsive Web Design Certification, this project consisted of designing and developing a fully responsive product landing page, ensuring adaptability across various screen sizes.</p>
-                    <button class="button-card">See more</button>
-                </div>
+            <div id="modal-container" class="modal">
+                <span class="close">&times;</span>
+                <image class="modal-content" id="modal-image">
             </div>
-
-            <div class="card">
-                <img class="card-image" src="assests/images/BrandingSignTwo.png" alt="Branding design for Oh my honey">
-                <div class="card-inner-container">
-                    <h3 class="project-name">Logo Design (Branding) – Oh My Honey!</h3>
-                    <div class="tag-container">
-                        <span class="tag">SVG</span>
-                        <span class="tag">Figma</span>
-                    </div>
-                    <p class="project-description">This academic project involved the complete process of designing a corporate identity for a business, from the creative brief to the final deliverable.</p>
-                    <button class="button-card">See more</button>
-                </div>
-            </div>
-
-            <div class="card">
-                <img class="card-image" src="assests/images/BrandingSign.jpg" alt="Branding design for DESIM">
-                <div class="card-inner-container">
-                    <h3 class="project-name">Logo Design (Branding) – DESIM</h3>
-                    <div class="tag-container">
-                        <span class="tag">SVG</span>
-                    </div>
-                    <p class="project-description">This is one of my real-world projects, where I created the corporate identity for Diesel Especialistas en Sistemas de Inyección Mercado (DESIM), a specialized diesel workshop.</p>
-                    <button class="button-card">See more</button>
-                </div>
-            </div>
-
-            <div class="card">
-                <img class="card-image" src="assests/images/GameInterfaceDesign.png" alt="Game UI design for LoopTower">
-                <div class="card-inner-container">
-                    <h3 class="project-name">UI Design for LoopTower</h3>
-                    <div class="tag-container">
-                        <span class="tag">Blender</span>
-                        <span class="tag">Canva</span>
-                        <span class="tag">Figma</span>
-                    </div>
-                    <p class="project-description">In this project, the initial interface for the video game LoopTower was developed. The design was based on a retro aesthetic, inspired by old RPG Maker games.</p>
-                    <button class="button-card">See more</button>
-                </div>
-            </div>
-
-            <div class="card">
-                <img class="card-image" src="assests/images/MobileAppPrototype.PNG" alt="Mobile app design">
-                <div class="card-inner-container">
-                    <h3 class="project-name">Mobile App Design & Prototyping</h3>
-                    <div class="tag-container">
-                        <span class="tag">FIGMA</span>
-                        <span class="tag">SVG</span>
-                    </div>
-                    <p class="project-description">This project focused on UI design for a mobile application, considering the target audience and user experience. The concept behind the app was to provide an accessible way to identify and filter foods that are incompatible with restrictive diets, intolerances, and allergies.</p>
-                    <button class="button-card">See more</button>
-                </div>
-            </div>
-
         </div>
     </section>
 
     <!-- fifth section -->
-    <section id="contact-me-section">
-        <h2>Contact me</h2>
-        <p>If you think we can do something together, don't hesitate!</p>
-        <h3>My social media</h3>
-        <div id="social-media-container">
-            <ul>
+    <section id="contact-me-section" class="content-section">
+        <div class="section-wrapper">
+            <h2>Contact me!</h2>
+            <div id="social-media-container">
+                <ul>
+                    <li>
+                        <a class="social-link" href="https://www.linkedin.com/in/ian-r-silva-101758237/" target="_blank">
+                            <div class="social-media-icon">
+                                <img class="socia-media-image" src="assests/icons/linkedin.svg" alt="LinkedIn logo" title="LinkedIn">
+                            </div>
+                            <span class="social-media-user">Ian R. Silva</span>
+                        </a>
+                    </li>
 
-                <li>
-                    <a>
-                        <img class="socia-media-icon" src="" alt="LinkedIn logo" title="LinkedIn">
-                        <span class="social-media-user">@Ghoen</span>
-                    </a>
-                </li>
+                    <li>
+                        <a class="social-link" href="https://github.com/Ghoen" target="_blank">
+                            <div class="social-media-icon">
+                                <img class="socia-media-image" src="assests/icons/Github_light.svg" alt="Github" title="Github">
+                            </div>
+                            <span class="social-media-user">@Ghoen</span>
+                        </a>
+                    </li>
 
-                <li>
-                    <a>
-                        <img class="socia-media-icon" src="" alt="Email" title="Email">
-                        <span class="social-media-user">ghoen_dev@outlook.com</span>
-                    </a>
-                </li>
+                    <li>
+                        <a class="social-link" href="mailto:ghoen_dev@outlook.com" target="_blank">
+                            <div class="social-media-icon">
+                                <img class="socia-media-image" src="assests/icons/mail-svgrepo-com.svg" alt="Email" title="Email">
+                            </div>
+                            <span class="social-media-user">ghoen_dev@outlook.com</span>
+                        </a>
+                    </li>
 
-            </ul>
+                    <li>
+                        <a class="social-link" href="https://youtu.be/qNvX8AmFpHk" target="_blank">
+                            <div class="social-media-icon">
+                                <img class="socia-media-image" src="assests/icons/youtube.svg" alt="Demo reel" title="Demo reel">
+                            </div>
+                            <span class="social-media-user">Demo reel</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
         </div>
     </section>
     <footer>
 
     </footer>
-
-<!--  Gradientes
-        1----------------------
-        <svg viewBox='0 0 248 248' xmlns='http://www.w3.org/2000/svg'>
-            <filter id='noiseFilter'>
-                <feTurbulence 
-                type='fractalNoise' 
-                baseFrequency='2.78' 
-                numOctaves='5' 
-                stitchTiles='stitch'/>
-            </filter>
-            <rect width='100%' height='100%' filter='url(#noiseFilter)'/>
-        </svg>
-
-        2----------------------
-        <svg id="noice">
-    <filter id="noise-filter">
-        <feTurbulence type="fractalNoise" baseFrequency="1.2" numOctaves="4" stitchTiles="stitch"></feTurbulence>
-        <feColorMatrix type="saturate" values="0"></feColorMatrix>
-        <feComponentTransfer>
-            <feFuncR type="linear" slope="0.49"></feFuncR>
-            <feFuncG type="linear" slope="0.49"></feFuncG>
-            <feFuncB type="linear" slope="0.49"></feFuncB>
-            <feFuncA type="linear" slope="0.45"></feFuncA>
-        </feComponentTransfer>
-        <feComponentTransfer>
-            <feFuncR type="linear" slope="1.77" intercept="-0.39"/>
-            <feFuncG type="linear" slope="1.77" intercept="-0.39"/>
-            <feFuncB type="linear" slope="1.77" intercept="-0.39"/>
-        </feComponentTransfer>
-    </filter>
-    <rect width="100%" height="100%" filter="url(#noise-filter)"></rect>
-</svg>
--->
-
     <script src="src/js/main.js"></script>
 </body>
 </html>
