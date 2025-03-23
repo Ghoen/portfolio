@@ -7,12 +7,10 @@
 /* card */
 @import url(card.css);
 
+/* ====== General Styles ====== */
+
 html {
     scroll-behavior: smooth;
-}
-
-* {
-    font-family: 'Inter', sans-serif;
 }
 
 body {
@@ -20,9 +18,15 @@ body {
     border: 0;
     padding: 0;
     box-sizing: border-box;
+
+    --color: rgba(216, 205, 205, 0.3);
+    background-color: #19191a;
+    background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent),
+    linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
+    background-size: 55px 55px;
 }
 
-*:not(#nav-wrapper *):not(#about-me-wrapper *):not(.card *) {
+*:not(#nav-wrapper *):not(#about-me-container *):not(.card *) {
     overflow-x: hidden;
 }
 
@@ -36,30 +40,80 @@ body {
     z-index: 2;
 }
 
-section, #welcome-section {
-    width: 100%;
+.content-section {
+    margin: 0;
+    width: 100vw;
     height: auto;
     min-height: 100vh;
-    display: flex;
-    margin-bottom: 25vh;
 }
 
-section {
-    flex-direction: column;
-    justify-content: center;
+.section-wrapper:not(#project-list-section .section-wrapper):not(#contact-me-section .section-wrapper) {
+    margin: 5vh 10vw;
+    padding: 3rem;
+}
+
+#project-list-section .section-wrapper {
+    margin: 5vh 10vw;
+    padding: auto;
+}
+
+#contact-me-section .section-wrapper {
+    position: relative;
+    bottom: 0;
+    margin: auto;
+    margin-bottom: 0;
+    width: 100%;
+    height: auto;
+    padding: 3rem 3rem 9rem 3rem;
+}
+
+#welcome-section {
+    width: auto;
+    height: auto;
+    min-height: 100vh;
+}
+
+* {
+    font-family: 'Inter', sans-serif;
 }
 
 h2 {
-    font-family: 'Inter', sans-serif;
     font-size: 3rem;
     color: var(--primary-color);
     margin: 2rem auto;
     width: 100vw;
 }
 
-/* ----------------- Sections ----------------- */
+h3 {
+    font-size: 1.75rem;
+}
 
-/* Welcome section */
+h3 {
+    font-weight: bold;
+}
+
+p, li, h4{
+    font-size: 1.25rem;
+    line-height: 150%;
+}
+
+/* ====== Text Styles ====== */
+
+.text-block {
+    display: block;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+.italic-text {
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* ====== Section One ====== */
+
 #welcome-section{
     background-color: var(--primary-dark-color);
     display: flex;
@@ -82,13 +136,8 @@ h2 {
 
 h1 {
     font-size: 7rem;
-    font-weight: medium;
     color: var(--primary-light-color);
     margin: 0;
-}
-
-.text-block {
-    display: block;
 }
 
 #alias-title {
@@ -102,127 +151,193 @@ h1 {
     margin-left: 0;
 }
 
-/* About me section */
+/* ====== Section Two ====== */
+
 #about-me-section {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-#about-me-wrapper {
-    width: 50%;
-    margin: auto;
-    margin-right: 0;
-    margin-top: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-}
-
-p, h4, #about-me-wrapper li, #experience-section li {
-    font-size: 1.5rem;
-}
-
-h3 {
-    font-size: 1.75rem;
-    margin-bottom: 0;
-    margin-top: 4rem;
-}
-
-.bold-text {
-    font-weight: bold;
-}
-
-.simple-link {
     position: relative;
-    text-decoration: none;
+    background-color: var(--secondary-light-color);
+}
+
+#about-me-section * {
     color: var(--tertiary-dark-color);
-    text-decoration: none;
-    font-weight: bold;
 }
 
-#animated-image-container {
-    width: 500px;
-    height: 700px;
-    margin: auto auto 1rem auto;
+.transition-shape {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
 }
 
-#background-canvas {
+.transition-shape svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 160px;
+}
+
+.transition-shape .shape-fill {
+    fill: #34747D;
+}
+
+/* ====== Section Three ====== */
+
+.inverted-transition-shape {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.inverted-transition-shape svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 61px;
+    transform: rotateY(180deg);
+}
+
+.inverted-transition-shape .shape-fill {
+    fill: var(--secondary-light-color);
+}
+
+/* ====== Section Four ====== */
+
+#experience-section {
+    position: relative;
+    background-color: var(--tertiary-dark-color);
+}
+
+#experience-section * {
+    color: var(--tertiary-light-color);
+}
+
+#project-list-section .section-wrapper h2 {
+    color: var(--tertiary-light-color);
+    width: auto;
+    margin: auto;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--secondary-dark-color);
-    border-radius: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
 }
 
-/* Experience */
-#experience-section-wrapper {
-    width: 60%;
-    margin: auto;
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#project-list-section {
+    position: relative;
+}
+
+.custom-shape-divider-top-1742767707 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1742767707 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 36px;
+}
+
+.custom-shape-divider-top-1742767707 .shape-fill {
+    fill: var(--tertiary-dark-color);
+}
+
+/* ====== Section Five ====== */
+
+#contact-me-section {
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: var(--primary-dark-color);
 }
 
-#experience-section ul {
+#contact-me-section h2 {
+    width: auto;
+    max-width: 100%;
+    margin: 5rem auto 3rem auto;
+    text-align: center;
+    color: var(--electric-yellow-color);
+}
+
+#social-media-container {
+    width: 100%;
+    height: auto;
+    margin: 2rem auto;
+}
+
+#social-media-container ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    list-style: none;
+    width: auto;
+    height: auto;
+    margin: auto;
     padding: 0;
 }
 
-#experience-section li {
-    list-style-type: none;
-    line-height: 150%;
-    margin: 0;
-}
-
-/* Projects */
-#project-list-section h2 {
-    margin: 2rem auto;
-    width: auto;
-}
-
-/* Contact me */
-#contact-me-section *{
-    width: auto;
-    margin: auto;
-}
-
-#contact-me-section ul {
+.social-media-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 1rem;
+    overflow: hidden;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+    justify-content: center;
     align-items: center;
 }
 
-#contact-me-section a {
-    margin: auto 2rem;
+.social-media-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.social-link {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: inherit;
 }
 
-
-/*
-css gradient: second layer
-{
-    width: 250px;
-    height: 250px;
-    background: 
-	linear-gradient(15deg, rgba(17,63,79,1), rgba(52,116,125,0.66));
+#contact-me-section * {
+    color: var(--tertiary-light-color);
 }
-
-resulting css
-{
-    width: 250px;
-    height: 250px;
-    filter: contrast(150%) brightness(200%);
-    background: 
-	linear-gradient(15deg, rgba(17,63,79,1), rgba(52,116,125,0.66)),
-	url(/👆/that/noise.svg);
-}
-*/
-
-/* Style for mobile devices
-@media screen and (max-width: 768px) {
-
-}
-*/
